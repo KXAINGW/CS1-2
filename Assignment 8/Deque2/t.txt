@@ -1,0 +1,4 @@
+block_num (circular) #注意 size_t 為-1的狀態 /dequeSize
+simulate 1 dimensional array
+iterator
+2 dimensional array
