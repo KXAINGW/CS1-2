@@ -411,10 +411,10 @@ public:
             myData.map = new value_type * [ 8 ]();
             myData.mapSize = 8;
          }
-         if (!off)
-             exit(1);
-         myData.map[0] = new value_type[compDequeSize()];
-         myData.map[0][off] = val;
+            myData.myOff = myData.mapSize * dequeSize - 1;
+            myData.map[myData.myOff / dequeSize % myData.mapSize] = new value_type[dequeSize];
+            myData.map[myData.myOff / dequeSize % myData.mapSize][myData.myOff % dequeSize] = val;
+
 
 
       }
