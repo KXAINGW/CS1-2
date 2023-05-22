@@ -24,7 +24,7 @@ private:
 	ReservationDatabase& reservation;
 	FlightSchedule& flightSchedule;
 
-	// function member
+	// member function 
 	void chooseArrivalAirport(int departureAirport, int& arrivalAirport);
 	void loadFlightSchedules(FlightSchedule& flightSchedule, int departureAirport, int arrivalAirport);
 	void chooseFlight(ReservationDatabase& reservation, const FlightSchedule& flightSchedule);
