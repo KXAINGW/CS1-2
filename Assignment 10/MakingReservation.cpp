@@ -34,7 +34,7 @@ void MakingReservation::execute()
    Reservation newReservation;
 
    string date;
-   cout << "\nDeparture Date (yyyy/mm/dd)¡G ";
+   cout << "\nDeparture Date (yyyy/mm/dd)ï¼š ";
    cin >> date;
    newReservation.setDate( date );
    cout << endl;
@@ -51,6 +51,17 @@ void MakingReservation::execute()
 
    int tickets[ 8 ];
    inputNumTickets( tickets );
+
+   // add
+   int ticketNum = 0;
+   for (size_t i = 1; i < 8; ++i)
+       ticketNum += newReservation.getTicket(i);
+   if (!ticketNum)
+   {
+       cout << "Your booking could not be completed!\n";
+       return;
+   }
+   // add end
    newReservation.setTickets( tickets );
 
    displayReservation( newReservation );
