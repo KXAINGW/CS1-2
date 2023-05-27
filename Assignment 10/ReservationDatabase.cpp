@@ -38,6 +38,11 @@ void ReservationDatabase::cancelReservation( string id, int n )
         if (!n)
             break;
     }
+    if (n)
+    {
+        cout << "\nOut of range!\n";
+        return;
+    }
     reservations.erase(it);
     cout << "\nThe seleted booking has been deleted.\n";
 
